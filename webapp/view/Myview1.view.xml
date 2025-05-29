@@ -1,7 +1,7 @@
 <mvc:View controllerName="sap.dd.project2.controller.Myview1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    
+    <Page id="page" title="{JSONDataModel>/Keyprop/1/name}">
+        <Button id="button" text="{JSONDataModel>/Keyprop/0/Age}"></Button>
     </Page>
 </mvc:View>

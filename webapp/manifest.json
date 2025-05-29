@@ -51,6 +51,10 @@
         "settings": {
           "bundleName": "sap.dd.project2.i18n.i18n"
         }
+      },
+      "JSONDataModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/data.json"
       }
     },
     "resources": {
