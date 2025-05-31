@@ -1,7 +1,8 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "sap/dd/project2/model/models"
-], (UIComponent, models) => {
+    "sap/dd/project2/model/models",
+    "sap/dd/project2/model/data"
+], (UIComponent, models, data) => {
     "use strict";
 
     return UIComponent.extend("sap.dd.project2.Component", {
@@ -18,6 +19,9 @@ sap.ui.define([
 
             // set the device model
             this.setModel(models.createDeviceModel(), "device");
+
+            //set data model globally
+            this.setModel(data.getDataModel() , "DataModel");
 
             // enable routing
             this.getRouter().initialize();
