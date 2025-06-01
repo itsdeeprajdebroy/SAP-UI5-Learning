@@ -5,12 +5,12 @@ sap.ui.define([
 
     return {
         getDataModel: function(){
-            return fetch('https://jsonplaceholder.typicode.com/todos')
+            return fetch('https://jsonplaceholder.typicode.com/users')
             .then((res) => {
                 return res.json();
             })
-            .then((todos) => {
-                var oDataNewModel = new JSONModel(todos);
+            .then((users) => {
+                var oDataNewModel = new JSONModel(users);
                 return oDataNewModel;
             })
             .catch(() => {

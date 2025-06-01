@@ -1,7 +1,19 @@
 <mvc:View controllerName="sap.dd.project2.controller.Myview1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{jsonPlaceDataModel>/0/title}">
-            <Button id="button" text="{jsonPlaceDataModel>/1/completed}"></Button>
+    <Page id="page" title="{i18n>title}">
+            <!-- <Button id="button" text="{jsonPlaceDataModel>/1/completed}"></Button> -->
+            <!-- <Label id="_labelid" text="{ path: 'jsonPlaceDataModel>/10/title' , formatter: '.formatter.getSplitText'}"></Label>
+            <Label id="_labelid2" text="{ path: 'jsonPlaceDataModel>/10/completed' , formatter: '.formatter.getStausOfUser'}"></Label> -->
+            <!-- <Label id="_labelid" text="{ parts: [{path: 'jsonPlaceDataModel>/1/title'}, {path: 'jsonPlaceDataModel>/1/completed'}]  , formatter: '.formatter.getStausOfUser'}"></Label>
+            <Label id="_labelid3" text="{=${jsonPlaceDataModel>/1/completed}? ' Inactive' : ' Active'}"></Label> -->
+
+            <List id="_listid_1" items="{jsonPlaceDataModel>/}">
+                <ObjectListItem id="_stdlistitem_1" title="{jsonPlaceDataModel>name}" type="Active" 
+                number="{jsonPlaceDataModel>phone}" numberUnit="{jsonPlaceDataModel>address/city}">
+                    <ObjectAttribute id="attri_1" text="{jsonPlaceDataModel>email}" />
+
+                </ObjectListItem>
+            </List>
     </Page>
 </mvc:View>

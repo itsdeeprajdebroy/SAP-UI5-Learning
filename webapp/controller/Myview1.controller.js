@@ -1,10 +1,13 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-], (Controller, JSONModel) => {
+    "sap/ui/model/json/JSONModel",
+    "sap/dd/project2/model/formatter"
+], (Controller, JSONModel, formatter) => {
     "use strict";
 
     return Controller.extend("sap.dd.project2.controller.Myview1", {
+        formatter: formatter,
+
         onInit() {
             var oData = {
                 "Keyprop": [
