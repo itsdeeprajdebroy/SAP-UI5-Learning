@@ -5,21 +5,19 @@ sap.ui.define([
 
     return {
         getDataModel: function(){
-            var oDataJson = {
-                "Keyprop": [
-                    {
-                        "name": "Deepraj",
-                        "Age": 26
-                    },
-                    {
-                        "name": "Raju",
-                        "Age": 28
-                    }
-                ]
-            };
-
-            var oModel = new JSONModel(oDataJson);
-            return oModel;
+            return fetch('https://jsonplaceholder.typicode.com/todos')
+            .then((res) => {
+                return res.json();
+            })
+            .then((todos) => {
+                var oDataNewModel = new JSONModel(todos);
+                return oDataNewModel;
+            })
+            .catch(() => {
+                return new JSONModel();
+            })
+            // var oModel = new JSONModel(oDataJson);
+            // return oModel;
         }
     }
 
