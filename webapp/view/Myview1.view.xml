@@ -8,12 +8,12 @@
             <!-- <Label id="_labelid" text="{ parts: [{path: 'jsonPlaceDataModel>/1/title'}, {path: 'jsonPlaceDataModel>/1/completed'}]  , formatter: '.formatter.getStausOfUser'}"></Label>
             <Label id="_labelid3" text="{=${jsonPlaceDataModel>/1/completed}? ' Inactive' : ' Active'}"></Label> -->
 
-            <List id="_listid_1" items="{jsonPlaceDataModel>/}">
-                <ObjectListItem id="_stdlistitem_1" title="{jsonPlaceDataModel>name}" type="Active" 
+            <List id="_listid_1" items="{path: 'jsonPlaceDataModel>/', factory: '.factory.childItem'}">
+                <!-- <ObjectListItem id="_stdlistitem_1" title="{jsonPlaceDataModel>name}" type="Active" 
                 number="{jsonPlaceDataModel>phone}" numberUnit="{jsonPlaceDataModel>address/city}">
                     <ObjectAttribute id="attri_1" text="{jsonPlaceDataModel>email}" />
 
-                </ObjectListItem>
+                </ObjectListItem> -->
             </List>
     </Page>
 </mvc:View>

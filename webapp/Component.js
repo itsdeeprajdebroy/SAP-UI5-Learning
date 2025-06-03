@@ -21,8 +21,8 @@ sap.ui.define([
             this.setModel(models.createDeviceModel(), "device");
 
             //set data model globally
-            data.getDataModel().then((oUserModel) => {
-                this.setModel(oUserModel, "jsonPlaceDataModel")
+            data.getDataModel().then((oTodoModel) => {
+                this.setModel(oTodoModel, "jsonPlaceDataModel") //earlier oUserModel
             })
 
             // enable routing
